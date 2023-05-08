@@ -1,17 +1,15 @@
 {% set name = "litepcie" %}
-{% set version = "2022.12" %}
-{% set sha256 = "64d26dc5b102a39faeb867e83748479589bcc7eed252a2584bc75841b1cc9122" %}
+{% set version = "2023.04" %}
+{% set sha256 = "4a79102facdbcf9ec0641f15873f1aa77bd92285717e99cc73c769c82344091d" %}
 
 package:
-   name: {{ name|lower }}
-   version: {{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   fn: {{ version }}.tar.gz
   url: https://github.com/enjoy-digital/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - patches/0001-add-manifest-uplift-setup.py-to-pass-twine-checks.patch
 
 build:
   number: 0
@@ -27,6 +25,7 @@ requirements:
   run:
     - python >=3.7
     - litex
+    - packaging
     - pyyaml
 
 test:
