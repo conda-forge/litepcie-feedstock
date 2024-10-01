@@ -1,6 +1,6 @@
 {% set name = "litepcie" %}
-{% set version = "2024.04" %}
-{% set sha256 = "658d440e7dc9e14287dced7970aff0fa846abffe22ce195d8ac280c2b291ffdb" %}
+{% set version = "2024.08" %}
+{% set sha256 = "9fe6b3cf7e26ca63e734fe9056138085a495203588bc2f9269934bc50ab3d36c" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
   entry_points:
     - litepcie_gen = litepcie.gen:main
 
@@ -22,9 +22,10 @@ requirements:
   host:
     - python >=3.7,<3.12
     - pip
+    - setuptools
   run:
     - python >=3.7,<3.12
-    - litex >=2024.04
+    - litex ~={{ version }}*
     - packaging
     - pyyaml
 
