@@ -1,6 +1,6 @@
 {% set name = "litepcie" %}
-{% set version = "2024.12" %}
-{% set sha256 = "5f3c80f57773a991248d4cab9effb7c98de2e375ae4788e1d111b064590ad9ac" %}
+{% set version = "2025.04" %}
+{% set sha256 = "80e45fe5f9f84e929cd15da9a0e61447d2265c6dbda0a82bcbf029ed30d7adea" %}
 
 package:
   name: {{ name|lower }}
