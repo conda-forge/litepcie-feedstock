@@ -1,10 +1,10 @@
 {% set name = "litepcie" %}
-{% set version = "2025.12" %}
-{% set sha256 = "2c05d311501e018d56030667369421bc524ccb8cddadd274595702bc55163e93" %}
+{% set version = "2026.04" %}
+{% set sha256 = "5140be025272a9f2ddb2f5f383dd706b75b34371966685905bffa8499fc6b5bf" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   fn: {{ version }}.tar.gz
